@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | FireNoodles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF4D00',
+                        dark: '#020617',
+                        card: '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .filter-green { filter: hue-rotate(90deg) drop-shadow(0 10px 15px rgba(34, 197, 94, 0.4)); }
+        .filter-blue { filter: hue-rotate(200deg) drop-shadow(0 10px 15px rgba(59, 130, 246, 0.4)); }
+        .filter-yellow { filter: hue-rotate(45deg) drop-shadow(0 10px 15px rgba(234, 179, 8, 0.4)); }
+        .product-img-wrapper { overflow: visible; display: flex; justify-content: center; padding: 20px; }
+        .product-img-wrapper img { width: 100%; max-width: 250px; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <svg class="w-8 h-8 text-primary group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                        </svg>
+                        <span class="text-2xl font-bold tracking-tight text-white uppercase"><span class="text-primary">Fire</span>Noodles</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-300 hover:text-primary transition-colors font-semibold tracking-wide">Home</a>
+                    <a href="shop.html" class="nav-link text-gray-300 hover:text-primary transition-colors font-semibold tracking-wide">Shop Now</a>
+                    <a href="about.html" class="nav-link text-gray-300 hover:text-primary transition-colors font-semibold tracking-wide">About Us</a>
+                    <a href="contact.html" class="nav-link text-gray-300 hover:text-primary transition-colors font-semibold tracking-wide">Contact</a>
+                    <a href="shop.html" class="btn-primary px-6 py-2 rounded-full font-bold uppercase text-sm tracking-wider">Order Now</a>
+                </div>
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 absolute w-full left-0 border-t border-slate-800 shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800">Home</a>
+                <a href="shop.html" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800">Shop Now</a>
+                <a href="about.html" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800">About Us</a>
+                <a href="contact.html" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-b from-slate-900 to-dark border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Our <span class="text-primary">Flavors</span></h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Discover our range of premium instant noodles. From intensely spicy to rich and savory, there's a bowl for every craving.</p>
+        </div>
+    </section>
+
+    <!-- Shop Grid -->
+    <section class="py-16 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- Product 1 -->
+                <div class="product-card rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center reveal">
+                    <div class="product-img-wrapper mb-6 relative">
+                        <span class="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">Bestseller</span>
+                        <img src="assets/spicy_noodles_pack_1773227375700.png" alt="Volcano Spicy" class="drop-shadow-xl" style="drop-shadow: 0 10px 15px rgba(255, 77, 0, 0.4);">
+                    </div>
+                    <div class="w-full">
+                        <h3 class="text-2xl font-bold text-white mb-2">Volcano Spicy</h3>
+                        <div class="flex justify-center text-yellow-500 text-sm mb-3">★★★★★ <span class="text-gray-500 ml-1">(420)</span></div>
+                        <p class="text-primary font-extrabold text-xl mb-6">$4.99</p>
+                        <button onclick="addToCart('Volcano Spicy')" class="w-full btn-primary py-3 rounded-full font-bold flex items-center justify-center gap-2">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center reveal" style="transition-delay: 100ms;">
+                    <div class="product-img-wrapper mb-6 relative">
+                        <img src="assets/spicy_noodles_pack_1773227375700.png" alt="Teriyaki Chicken" class="filter-green">
+                    </div>
+                    <div class="w-full">
+                        <h3 class="text-2xl font-bold text-white mb-2">Teriyaki Chicken</h3>
+                        <div class="flex justify-center text-yellow-500 text-sm mb-3">★★★★☆ <span class="text-gray-500 ml-1">(125)</span></div>
+                        <p class="text-primary font-extrabold text-xl mb-6">$4.50</p>
+                        <button onclick="addToCart('Teriyaki Chicken')" class="w-full border border-gray-600 hover:border-primary text-white hover:text-primary transition-colors py-3 rounded-full font-bold flex items-center justify-center gap-2">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center reveal" style="transition-delay: 200ms;">
+                    <div class="product-img-wrapper mb-6 relative">
+                        <img src="assets/spicy_noodles_pack_1773227375700.png" alt="Ocean Seafood" class="filter-blue">
+                    </div>
+                    <div class="w-full">
+                        <h3 class="text-2xl font-bold text-white mb-2">Ocean Seafood</h3>
+                        <div class="flex justify-center text-yellow-500 text-sm mb-3">★★★★★ <span class="text-gray-500 ml-1">(89)</span></div>
+                        <p class="text-primary font-extrabold text-xl mb-6">$5.50</p>
+                        <button onclick="addToCart('Ocean Seafood')" class="w-full border border-gray-600 hover:border-primary text-white hover:text-primary transition-colors py-3 rounded-full font-bold flex items-center justify-center gap-2">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center reveal" style="transition-delay: 300ms;">
+                    <div class="product-img-wrapper mb-6 relative">
+                        <span class="absolute top-0 right-0 bg-yellow-500 text-dark text-xs font-bold px-2 py-1 rounded-full z-10">New</span>
+                        <img src="assets/spicy_noodles_pack_1773227375700.png" alt="Golden Curry" class="filter-yellow">
+                    </div>
+                    <div class="w-full">
+                        <h3 class="text-2xl font-bold text-white mb-2">Golden Curry</h3>
+                        <div class="flex justify-center text-yellow-500 text-sm mb-3">★★★★☆ <span class="text-gray-500 ml-1">(42)</span></div>
+                        <p class="text-primary font-extrabold text-xl mb-6">$4.99</p>
+                        <button onclick="addToCart('Golden Curry')" class="w-full border border-gray-600 hover:border-primary text-white hover:text-primary transition-colors py-3 rounded-full font-bold flex items-center justify-center gap-2">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker pt-20 pb-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-slate-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 FireNoodles. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Facebook</a>
+                    <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

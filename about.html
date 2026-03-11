@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | FireNoodles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF4D00',
+                        dark: '#020617',
+                        card: '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <svg class="w-8 h-8 text-primary group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                        </svg>
+                        <span class="text-2xl font-bold tracking-tight text-white uppercase"><span class="text-primary">Fire</span>Noodles</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-300 hover:text-primary transition-colors font-semibold tracking-wide">Home</a>
+                    <a href="shop.html" class="nav-link text-gray-300 hover:text-primary transition-colors font-semibold tracking-wide">Shop Now</a>
+                    <a href="about.html" class="nav-link text-gray-300 hover:text-primary transition-colors font-semibold tracking-wide">About Us</a>
+                    <a href="contact.html" class="nav-link text-gray-300 hover:text-primary transition-colors font-semibold tracking-wide">Contact</a>
+                    <a href="shop.html" class="btn-primary px-6 py-2 rounded-full font-bold uppercase text-sm tracking-wider">Order Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 absolute w-full left-0 border-t border-slate-800 shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800">Home</a>
+                <a href="shop.html" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800">Shop Now</a>
+                <a href="about.html" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800">About Us</a>
+                <a href="contact.html" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 bg-dark border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Our <span class="text-primary">Story</span></h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">From a small kitchen experiment to a worldwide revolution in instant noodles. This is how the fire started.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16 reveal">
+                <div class="lg:w-1/2">
+                    <img src="assets/hero_noodles_bowl_1773227348770.png" alt="Delicious Bowl" class="rounded-3xl shadow-2xl hero-image-glow w-full object-cover h-[500px]">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-white mb-6">The Craving That Changed Everything</h2>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        It started late one night when our founder was studying and craved the authentic, fiery ramen from the street stalls of Asia. But nothing on the supermarket shelves came close to capturing that soul-warming heat and perfectly bouncy noodle texture.
+                    </p>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        After endless late nights, hundreds of spice blends, and the perfect premium wheat formulation, FireNoodles was born. We created the instant noodle experience we always wanted: uncompromising quality, authentic spices, and a heat that makes you feel alive.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 mt-10">
+                        <div class="border-l-4 border-primary pl-4">
+                            <span class="block text-4xl font-extrabold text-white mb-2">1M+</span>
+                            <span class="text-gray-500 font-medium uppercase tracking-wider text-sm">Bowls Sold</span>
+                        </div>
+                        <div class="border-l-4 border-primary pl-4">
+                            <span class="block text-4xl font-extrabold text-white mb-2">10</span>
+                            <span class="text-gray-500 font-medium uppercase tracking-wider text-sm">Countries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker pt-10 pb-10 border-t border-slate-800 mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2026 FireNoodles. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
